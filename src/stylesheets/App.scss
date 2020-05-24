@@ -1,0 +1,95 @@
+$col: calc(100vw/12);
+$row: calc(100vh/12);
+
+$col-75: calc(100vw/16);
+
+$dark: #222;
+$light: #ddd;
+$middle-d: #333;
+$middle: #555;
+$middle-l: #aaa;
+
+
+
+
+
+
+
+
+
+// COLUMNS
+
+@for $i from 1 through 12 {
+  .w-#{$i}-col {
+    width: (100/12 * $i) * 1vw;
+  }
+}
+
+@for $i from 1 through 4 {
+  .w-#{$i}-quarters-col {
+    width: (100 / 48 * $i) * 1vw;
+  }
+}
+
+@for $i from 1 through 4 {
+  .h-#{$i}-quarters-col {
+    height: (100 / 48 * $i) * 1vw;
+  }
+}
+
+@for $i from 1 through 12 {
+  .h-#{$i}-col {
+    height: (100/12 * $i) * 1vw;
+  }
+}
+
+
+
+
+// ROWS
+
+@for $i from 1 through 12 {
+  .h-#{$i}-row {
+    height: (100/12 * $i) * 1vh;
+  }
+}
+
+@for $i from 1 through 4 {
+  .h-#{$i}-quarters-row {
+    height: (100 / 48 * $i) * 1vh;
+  }
+}
+
+@for $i from 1 through 12 {
+  .w-#{$i}-row {
+    width: (100/12 * $i) * 1vh;
+  }
+}
+
+@for $i from 1 through 4 {
+  .w-#{$i}-quarters-row {
+    width: (100 / 48 * $i) * 1vh;
+  }
+}
+
+
+.w-h-cta {
+  width: (450 / 96) * 1vh;
+  height: (450 / 96) * 1vh;
+}
+
+h4 {
+  margin: 0;
+}
+
+
+@import './Nav.scss';
+@import './Project.scss';
+@import './Landing.scss';
+@import './Svg.scss';
+@import './Form.scss';
+
+.App {
+  height: max-content;
+  width: max-content;
+}

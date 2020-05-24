@@ -1,0 +1,29 @@
+.test-logo {
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+
+.inner {
+    fill: $middle-d;
+    transition: .5s;
+}
+
+.border {
+    fill: $dark;
+}
+
+.inner:hover {
+    fill: $light;
+}
+
+a {
+    border-radius: 50%;
+    background-color: $dark;
+    transition: .5s;
+}
+
+a:hover {
+    background-color: $light;
+}
+
