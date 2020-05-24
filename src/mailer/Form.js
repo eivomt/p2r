@@ -1,83 +1,36 @@
-import React, { Component } from 'react'
-import { render } from '@testing-library/react'
+import React from 'react';
+import emailjs from 'emailjs-com';
 
-class Form extends Component {
-    constructor(props) {
-        super(props)
 
-        this.state = { 
-            message_html: '', 
-            from_name: '', 
-            from_email: '' 
-        }
+export default function Form() {
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.sendFeedback = this.sendFeedback.bind(this);
-    }
+  function sendEmail(e) {
+    e.preventDefault();
 
-    handleChange(event) {
-        let toUpdate = event.target.name
-        console.log(event.target.name)
-        this.setState({toUpdate: event.target.value})
-    }
-    
-    handleSubmit (event) {
-        const templateId = 'template_AKvdLrXf';
-    
-        this.sendFeedback(
-            templateId, 
-            {
-                message_html: this.state.message_html,
-                from_name: this.state.from_name,
-                reply_to: this.state.email
-            }
-        )
-    }
+    emailjs.sendForm('gmail', 'template_AKvdLrXf', e.target, 'user_4yJW6xOsOp2REExJ1L3Nz')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
 
-    sendFeedback (templateId, variables) {
-        window.emailjs.send(
-          'gmail', templateId,
-          variables
-          ).then(res => {
-            console.log('Email successfully sent!')
-          })
-          // Handle errors here however you like, or use a React error boundary
-          .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
-      }
+  return (
+    <form className="contact-form" onSubmit={sendEmail}>
 
-    render() {
-        return(
-            <form className="mail-form">
-                <div>
-                    <input 
-                        type="text" 
-                        name="reply_to"
-                        onChange={this.handleChange} />
-                    <label>Your Email</label>
-                    <br/>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <br/>
 
-                    <input 
-                        type="text" 
-                        name="from_name" 
-                        onChange={this.handleChange}/>
-                    <label>Your name</label>
-                    <br/>
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <br/>
 
-                    <textarea
-                        id="test-mailing"
-                        name="message_html"
-                        onChange={this.handleChange}
-                        placeholder="Post some lorem ipsum here"
-                        required
-                        value={this.state.feedback}
-                        style={{width: '100%', height: '150px'}}
-                    />
-                <button value="Submit" className="btn btn--submit" onClick={this.handleSubmit}>Send</button>
-                </div>
-            </form>
-        )
-    }
+      <label>Message</label>
+      <textarea name="message" />
+      <br/>
+      <input type="submit" value="Send" />
+
+    </form>
+  );
 }
-
-export default Form
