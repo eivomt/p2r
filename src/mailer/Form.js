@@ -6,9 +6,9 @@ class Form extends Component {
         super(props)
 
         this.state = { 
-            feedback: '', 
-            name: 'Name', 
-            email: 'email@example.com' 
+            message_html: '', 
+            from_name: '', 
+            from_email: '' 
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,13 +17,22 @@ class Form extends Component {
     }
 
     handleChange(event) {
-        this.setState({feedback: event.target.value})
+        let toUpdate = event.target.name
+        console.log(event.target.name)
+        this.setState({toUpdate: event.target.value})
     }
     
     handleSubmit (event) {
-        const templateId = ' user_4yJW6xOsOp2REExJ1L3Nz';
+        const templateId = 'template_AKvdLrXf';
     
-        this.sendFeedback(templateId, {message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email})
+        this.sendFeedback(
+            templateId, 
+            {
+                message_html: this.state.message_html,
+                from_name: this.state.from_name,
+                reply_to: this.state.email
+            }
+        )
     }
 
     sendFeedback (templateId, variables) {
@@ -41,17 +50,31 @@ class Form extends Component {
         return(
             <form className="mail-form">
                 <div>
+                    <input 
+                        type="text" 
+                        name="reply_to"
+                        onChange={this.handleChange} />
+                    <label>Your Email</label>
+                    <br/>
+
+                    <input 
+                        type="text" 
+                        name="from_name" 
+                        onChange={this.handleChange}/>
+                    <label>Your name</label>
+                    <br/>
+
                     <textarea
                         id="test-mailing"
-                        name="test-mailing"
+                        name="message_html"
                         onChange={this.handleChange}
                         placeholder="Post some lorem ipsum here"
                         required
                         value={this.state.feedback}
                         style={{width: '100%', height: '150px'}}
                     />
+                <button type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit}>Send</button>
                 </div>
-                <input type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit} />
             </form>
         )
     }
