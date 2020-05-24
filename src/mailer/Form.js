@@ -73,7 +73,7 @@ class Form extends Component {
                         value={this.state.feedback}
                         style={{width: '100%', height: '150px'}}
                     />
-                <button type="button" value="Submit" className="btn btn--submit" onClick={this.handleSubmit}>Send</button>
+                <button value="Submit" className="btn btn--submit" onClick={this.handleSubmit}>Send</button>
                 </div>
             </form>
         )
