@@ -16,21 +16,36 @@ export default function Form() {
   }
 
   return (
-    <form className="contact-form" onSubmit={sendEmail}>
+    <div className="form-container">
+      <h2>Get in touch</h2>
+      <form className="contact-form" onSubmit={sendEmail}>
 
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <br/>
+        <label>Name</label>
+        <input 
+          type="text" 
+          name="user_name"
+          className="contact-input w-2-col h-2-quarters-row" />
+        <br/>
 
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <br/>
+        <label>Email</label>
+        <input 
+          type="email" 
+          name="user_email"
+          className="contact-input w-2-col h-2-quarters-row" />
+        <br/>
 
-      <label>Message</label>
-      <textarea name="message" />
-      <br/>
-      <input type="submit" value="Send" />
+        <label>Message</label>
+        <textarea 
+          name="message"
+          className="contact-textarea w-2-col h-2-row" />
+        <br/>
 
-    </form>
+        <input 
+          className="w-2-col h-2-quarters-row"
+          type="submit" 
+          value="Send" />
+
+      </form>
+    </div>
   );
 }

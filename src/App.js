@@ -17,6 +17,7 @@ class App extends Component {
   constructor(props) {
       super(props)
       this.handleScroll = this.handleScroll.bind(this)
+      this.handleRouteChange = this.handleRouteChange.bind(this)
       this.state = {project: "Home"}
   }
 
@@ -29,8 +30,9 @@ class App extends Component {
   }
 
   handleScroll = (e) => {
+
       let row = window.innerHeight / 12
-      let breakPoint = 7 * row
+      let breakPoint = 10 * row
       let project = 16 * row
       let scroll = window.pageYOffset
 
@@ -45,37 +47,83 @@ class App extends Component {
       }
   }
 
+  handleRouteChange = (e) => { 
+
+    if (e.target.id === "Home") {
+      this.setState({project: e.target.id})
+      window.removeEventListener('scroll', this.handleScroll)
+      window.addEventListener('scroll', this.handleScroll)
+    } else {
+      window.removeEventListener('scroll', this.handleScroll)
+      this.setState({project: e.target.id})
+    }
+  }
+
 
 
   render() {
     return (
       <HashRouter>
         <div className="App" onScroll={this.handleScroll}>
-          <div className="nav-container-main" onScroll={this.handleScroll}>
+          <div className="nav-container-main">
                   <div className="bg w-12-col h-1-row">
                       
                   </div>
                   <div className="nav-container">
 
-                    <NavLink exact to="/" className="home">
-                      <div className="logo w-3-quarters-row h-3-quarters-row">
+                    <NavLink 
+                      exact to="/" 
+                      className="home"
+                      onClick={this.handleRouteChange}>
+                      <div 
+                        className="
+                          logo 
+                          w-3-quarters-row 
+                          h-3-quarters-row"
+                          id="Home">
                       </div>
                     </NavLink>
 
-                      <h4 className="current-view">{this.props.project}</h4>
+                    <h4 className="current-view">
+                      {this.state.project}
+                    </h4>
 
-                    <NavLink to="/blog" className="nav-1 ">
-                      <div className="logo w-3-quarters-row h-3-quarters-row">
+                    <NavLink 
+                      to="/blog" 
+                      className="nav-1 "
+                      onClick={this.handleRouteChange}>
+                      <div 
+                        className="
+                          logo 
+                          w-3-quarters-row 
+                          h-3-quarters-row"
+                          id="Blog">
                       </div>
                     </NavLink>
 
-                    <NavLink to="/about" className="nav-2">
-                      <div className="logo  w-3-quarters-row h-3-quarters-row">
+                    <NavLink 
+                      to="/about" 
+                      className="nav-2"
+                      onClick={this.handleRouteChange}>
+                      <div 
+                        className="
+                          logo  
+                          w-3-quarters-row 
+                          h-3-quarters-row"
+                          id="About">
                       </div>
                     </NavLink>
 
-                    <NavLink to="/contact" className="nav-3">
-                      <div className="logo  w-3-quarters-row h-3-quarters-row">
+                    <NavLink 
+                      to="/contact" 
+                      className="nav-3"
+                      onClick={this.handleRouteChange}>
+                      <div 
+                        className="
+                          logo  
+                          w-3-quarters-row 
+                          h-3-quarters-row"
+                          id="Contact">
                       </div>
                     </NavLink>
 

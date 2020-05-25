@@ -11,15 +11,26 @@
     grid-row-gap: 0px;
     align-items: center;
     justify-items: center;
+    pointer-events: none;
 
-    .home { grid-area: 1 / 2 / 2 / 3; }
-    .current-view { grid-area: 1 / 3 / 2 / 6; }
-    .nav-1 { grid-area: 1 / 9 / 2 / 10; }
-    .nav-2 { grid-area: 1 / 10 / 2 / 11; }
-    .nav-3 { grid-area: 1 / 11 / 2 / 12; }
-    .cta-1 { grid-area: 3 / 2 / 4 / 3; }
-    .cta-2 { grid-area: 4 / 2 / 5 / 3; }
-    .cta-3 { grid-area: 5 / 2 / 6 / 3; }
+    .home { 
+        grid-area: 1 / 2 / 2 / 3;
+        pointer-events: all;
+    }
+    .current-view { grid-area: 1 / 3 / 2 / 6;
+        pointer-events: all; }
+    .nav-1 { grid-area: 1 / 9 / 2 / 10;
+        pointer-events: all; }
+    .nav-2 { grid-area: 1 / 10 / 2 / 11;
+        pointer-events: all; }
+    .nav-3 { grid-area: 1 / 11 / 2 / 12;
+        pointer-events: all; }
+    .cta-1 { grid-area: 3 / 2 / 4 / 3;
+        pointer-events: all; }
+    .cta-2 { grid-area: 4 / 2 / 5 / 3;
+        pointer-events: all; }
+    .cta-3 { grid-area: 5 / 2 / 6 / 3;
+        pointer-events: all; }
 
     h4 {
         color: $middle-l;
@@ -59,4 +70,5 @@
 
 .nav-container-main {
     position: fixed;
+    pointer-events: none;
 }

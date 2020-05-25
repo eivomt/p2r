@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TestLogo from '../assets/testlogo'
 
 class Landing extends Component {
     render () {

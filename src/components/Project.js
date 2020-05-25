@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TestLogo from '../assets/testlogo'
 
 class Project extends Component {
     render() {

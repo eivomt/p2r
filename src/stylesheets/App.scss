@@ -1,5 +1,6 @@
 $col: calc(100vw/12);
 $row: calc(100vh/12);
+$col2: calc(100vw/6);
 
 $col-75: calc(100vw/16);
 
@@ -8,13 +9,6 @@ $light: #ddd;
 $middle-d: #333;
 $middle: #555;
 $middle-l: #aaa;
-
-
-
-
-
-
-
 
 
 // COLUMNS
@@ -42,8 +36,6 @@ $middle-l: #aaa;
     height: (100/12 * $i) * 1vw;
   }
 }
-
-
 
 
 // ROWS
@@ -87,9 +79,13 @@ h4 {
 @import './Project.scss';
 @import './Landing.scss';
 @import './Svg.scss';
-@import './Form.scss';
+@import './Contact.scss';
 
 .App {
   height: max-content;
   width: max-content;
+}
+
+.content {
+  padding-top: $row;
 }
