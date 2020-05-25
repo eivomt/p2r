@@ -13,39 +13,63 @@ export default function Form() {
       }, (error) => {
           console.log(error.text);
       });
+
+      alert("Message sent")
+      e.target.reset()
+
   }
 
   return (
     <div className="form-container">
-      <h2>Get in touch</h2>
-      <form className="contact-form" onSubmit={sendEmail}>
+      <div className="spacer">
 
-        <label>Name</label>
-        <input 
-          type="text" 
-          name="user_name"
-          className="contact-input w-2-col h-2-quarters-row" />
-        <br/>
+        <div className="title">
+          <h2>REACH OUT</h2>
+          <hr className="form-title-line"/>
+        </div>
 
-        <label>Email</label>
-        <input 
-          type="email" 
-          name="user_email"
-          className="contact-input w-2-col h-2-quarters-row" />
-        <br/>
+        <form className="contact-form" onSubmit={sendEmail}>
 
-        <label>Message</label>
-        <textarea 
-          name="message"
-          className="contact-textarea w-2-col h-2-row" />
-        <br/>
+          <div className="input-container">
+            {/* <label>Name</label> */}
+            <input
+              autoComplete="off" 
+              type="text" 
+              name="user_name"
+              placeholder="Name"
+              className="contact-input w-2-col h-3-quarters-row" />
+            <br/>
+          </div>
 
-        <input 
-          className="w-2-col h-2-quarters-row"
-          type="submit" 
-          value="Send" />
+          <div className="input-container">
+            {/* <label>Email</label> */}
+            <input 
+              required
+              autoComplete="off"
+              type="email" 
+              name="user_email"
+              placeholder="Email"
+              className="contact-input w-2-col h-3-quarters-row" />
+            <br/>
+          </div>
 
-      </form>
+          <div className="input-container">
+            {/* <label>Message</label> */}
+            <textarea 
+              required
+              name="message"
+              placeholder="Your message..."
+              className="message w-2-col" />
+            <br/>
+          </div>
+
+          <input 
+            className="submit-btn w-1-col h-3-quarters-row"
+            type="submit" 
+            value="SEND" />
+
+        </form>
+      </div>
     </div>
   );
 }

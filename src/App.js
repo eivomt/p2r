@@ -6,6 +6,8 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
+import Logo from './assets/Logo'
+
 import {
   Route,
   NavLink,
@@ -49,8 +51,8 @@ class App extends Component {
 
   handleRouteChange = (e) => { 
 
-    if (e.target.id === "Home") {
-      this.setState({project: e.target.id})
+    if (e.target.id === "Logo") {
+      this.setState({project: "Home"})
       window.removeEventListener('scroll', this.handleScroll)
       window.addEventListener('scroll', this.handleScroll)
     } else {
@@ -77,10 +79,11 @@ class App extends Component {
                       onClick={this.handleRouteChange}>
                       <div 
                         className="
-                          logo 
+                          logo-transp 
                           w-3-quarters-row 
                           h-3-quarters-row"
                           id="Home">
+                            <Logo fill="#DDD"/>
                       </div>
                     </NavLink>
 
@@ -94,7 +97,7 @@ class App extends Component {
                       onClick={this.handleRouteChange}>
                       <div 
                         className="
-                          logo 
+                          logo-light 
                           w-3-quarters-row 
                           h-3-quarters-row"
                           id="Blog">
@@ -107,7 +110,7 @@ class App extends Component {
                       onClick={this.handleRouteChange}>
                       <div 
                         className="
-                          logo  
+                          logo-light  
                           w-3-quarters-row 
                           h-3-quarters-row"
                           id="About">
@@ -120,20 +123,20 @@ class App extends Component {
                       onClick={this.handleRouteChange}>
                       <div 
                         className="
-                          logo  
+                          logo-light  
                           w-3-quarters-row 
                           h-3-quarters-row"
                           id="Contact">
                       </div>
                     </NavLink>
 
-                      <div className="logo cta-1 w-h-cta">
+                      <div className="logo-cta cta-1 w-h-cta">
                       </div>
 
-                      <div className="logo cta-2 w-h-cta">
+                      <div className="logo-cta cta-2 w-h-cta">
                       </div>
 
-                      <div className="logo cta-3 w-h-cta">
+                      <div className="logo-cta cta-3 w-h-cta">
                       </div>
                       
                   </div>
