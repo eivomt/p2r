@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './stylesheets/App.scss';
 
 import Home from './pages/Home'
 import About from './pages/About'
@@ -67,86 +66,54 @@ class App extends Component {
     return (
       <HashRouter>
         <div className="App" onScroll={this.handleScroll}>
-          <div className="nav-container-main">
-                  <div className="bg w-12-col h-1-row">
-                      
-                  </div>
-                  <div className="nav-container">
+          <div className="header">
 
-                    <NavLink 
-                      exact to="/" 
-                      className="home"
-                      onClick={this.handleRouteChange}>
-                      <div 
-                        className="
-                          logo-transp 
-                          w-3-quarters-row 
-                          h-3-quarters-row"
-                          id="Home">
-                            <Logo fill="#DDD"/>
-                      </div>
-                    </NavLink>
+            <div className="left">
+              <NavLink 
+                exact to="/" 
+                className="home"
+                onClick={this.handleRouteChange}>
+                <div className="logo" id="Home">
+                  <Logo fill="#000"/>
+                </div>
+              </NavLink>
 
-                    <h4 className="current-view">
-                      {this.state.project}
-                    </h4>
+              <h4 className="current-view">
+                {this.state.project}
+              </h4>
 
-                    <NavLink 
-                      to="/blog" 
-                      className="nav-1 "
-                      onClick={this.handleRouteChange}>
-                      <div 
-                        className="
-                          logo-light 
-                          w-3-quarters-row 
-                          h-3-quarters-row"
-                          id="Blog">
-                      </div>
-                    </NavLink>
+            </div>
 
-                    <NavLink 
-                      to="/about" 
-                      className="nav-2"
-                      onClick={this.handleRouteChange}>
-                      <div 
-                        className="
-                          logo-light  
-                          w-3-quarters-row 
-                          h-3-quarters-row"
-                          id="About">
-                      </div>
-                    </NavLink>
+            <div className="right">
 
-                    <NavLink 
-                      to="/contact" 
-                      className="nav-3"
-                      onClick={this.handleRouteChange}>
-                      <div 
-                        className="
-                          logo-light  
-                          w-3-quarters-row 
-                          h-3-quarters-row"
-                          id="Contact">
-                      </div>
-                    </NavLink>
+              <NavLink 
+                to="/about" 
+                onClick={this.handleRouteChange}>
+                <p>About</p>
+              </NavLink>
 
-                      <div className="logo-cta cta-1 w-h-cta">
-                      </div>
+              <NavLink 
+                to="/blog" 
+                onClick={this.handleRouteChange}>
+                <p>Blog</p>
+              </NavLink>
 
-                      <div className="logo-cta cta-2 w-h-cta">
-                      </div>
-
-                      <div className="logo-cta cta-3 w-h-cta">
-                      </div>
-                      
-                  </div>
-              </div>
-          
+              <NavLink 
+                to="/contact" 
+                onClick={this.handleRouteChange}>
+                  <p>Contact</p>
+              </NavLink>
+            </div>
+          </div>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/blog" component={Blog}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
+          </div>
+          <div className="footer">
+            <p>copyright:    something</p>
+            <p>e.omtveit@gmail.com</p>
           </div>
         </div>
       </HashRouter>

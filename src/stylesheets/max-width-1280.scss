@@ -1,0 +1,56 @@
+@media screen and (max-width: 1280px) {
+
+    .header {
+        .right {
+            a{
+                p {
+                    font-size: medium;
+                }
+            }
+        }
+        .left {
+            .logo {
+                border: 1px solid #222;
+            }
+        }
+    }
+
+    .title {
+        h2 {
+            font-size: 5rem;
+        }
+    }
+
+    .summary {
+        h2 {
+            font-size: 1.25em;
+        }
+        p {
+            font-size: .8em;
+        }
+    }
+    .technologies {
+        h2 {
+            font-size: 1.25em;
+        }
+        p {
+            font-size: .8em;
+        }
+    }
+
+    .button {
+        border: 1px solid white
+    }
+
+    .l-content {
+        h1 {
+            font-weight: 100;
+        }
+        h4 {
+            font-weight: 400;
+        }
+        .logo {
+            border: 1.5px solid white;
+        }
+    }
+}

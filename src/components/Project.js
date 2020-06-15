@@ -3,31 +3,35 @@ import React, { Component } from 'react'
 class Project extends Component {
     render() {
         return(
-            <div className="project-container">
-                <div className="img-container"></div>
-                <div className="text-container">
-                    <div className="left">
-                        <h4>Summary</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis earum, magni cumque, quia nesciunt porro praesentium eaque, unde dicta vitae voluptatem. Expedita!</p>
+             <div className="grid">
+
+                <div className="title">
+                    <h2>{this.props.title}</h2>
+                </div>
+
+                <div className="summary">
+                    <h2>Summary</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde laborum voluptatibus ratione explicabo temporibus ipsa assumenda voluptas, rerum esse dolorum nemo blanditiis reiciendis pariatur asperiores.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique ea sed. Quis ab harum illo provident sequi nobis in aliquid natus.</p>
+                </div>
+
+                <div className="p-content">
+                    <div className="btn-img"></div>
+                    <img className={this.props.imagesize} src={this.props.image} alt="camera"/>
+                    <div className="btn-img"></div>
+                </div>
+
+                <div className="technologies">
+                    <h2>Technologies</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde laborum voluptatibus ratione explicabo temporibus ipsa assumenda voluptas, rerum esse dolorum nemo blanditiis reiciendis pariatur asperiores.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique ea sed. Quis ab harum illo provident sequi nobis in aliquid natus.</p>
+                    <div className="buttons">
+                        <div className="button"></div>
+                        <div className="button"></div>
+                        <div className="button"></div>
+                        <div className="button"></div>
+                        <div className="button"></div>
                     </div>
-                    <div className="right">
-                        <h4>Tech</h4>
-
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, repudiandae?</p>
-
-                        <a href="https://www.google.com" className="tech tech1 w-2-quarters-row h-2-quarters-row">
-                        </a>
-                        <a href="https://www.google.com" className="tech tech2 w-2-quarters-row h-2-quarters-row">
-                        </a>
-                        <a href="https://www.google.com" className="tech tech3 w-2-quarters-row h-2-quarters-row">
-                        </a>
-                        <a href="https://www.google.com" className="tech tech4 w-2-quarters-row h-2-quarters-row">
-                        </a>
-                        <a href="https://www.google.com" className="tech tech5 w-2-quarters-row h-2-quarters-row">
-                        </a>
-
-                    </div>
-
                 </div>
             </div>
         )

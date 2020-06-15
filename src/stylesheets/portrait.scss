@@ -1,0 +1,62 @@
+@media screen and (orientation: portrait) {
+    .grid {
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-areas: 
+        ". title title ."
+        ". . . ."
+        ". summary summary ."
+        ". p-content p-content ."
+        ". technologies technologies ."
+        ;
+        margin-bottom: 10vh;
+    }
+
+    .summary {
+        text-align: justify;
+        padding-left: 20vw;
+        padding-right: 20vw;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .technologies {
+        text-align: justify;
+        padding-left: 20vw;
+        padding-right: 20vw;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .btn-img {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .smaller {
+        height: 35vw;
+    }
+
+    .normal {
+        height: 30vh;
+    }
+
+    .p-content {
+        justify-content: space-between;
+    }
+    .header {
+        .right {
+            width: 30vw;
+            margin-right: 10vw;
+        }
+    }
+
+    .title {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+}
