@@ -16,6 +16,7 @@ class Home extends Component {
                 <Project title="Myosotis" imagesize="normal" image={CameraFront}/>
                 <Project title="Plus U" imagesize="smaller" image={You}/>
                 <Project title="Portfolio" imagesize="normal" image={CameraPersp}/>
+          
             </div>
         )
     }

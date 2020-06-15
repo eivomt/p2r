@@ -8,11 +8,6 @@
                 }
             }
         }
-        .left {
-            .logo {
-                border: 1px solid #222;
-            }
-        }
     }
 
     .title {
@@ -49,8 +44,14 @@
         h4 {
             font-weight: 400;
         }
-        .logo {
-            border: 1.5px solid white;
-        }
+    }
+
+    .current-view {
+        margin-left: calc(20vw - 60px);
+    }
+
+    .technologies {
+        border-bottom: 1px solid #333;
+        padding-bottom: 20vw;
     }
 }

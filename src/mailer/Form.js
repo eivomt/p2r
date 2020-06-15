@@ -21,55 +21,40 @@ export default function Form() {
 
   return (
     <div className="form-container">
-      <div className="spacer">
 
-        <div className="title">
+        <div className="call-to-action">
           <h2>REACH OUT</h2>
-          <hr className="form-title-line"/>
         </div>
 
         <form className="contact-form" onSubmit={sendEmail}>
 
-          <div className="input-container">
-            {/* <label>Name</label> */}
             <input
               autoComplete="off" 
               type="text" 
               name="user_name"
               placeholder="Name"
-              className="contact-input w-2-col h-3-quarters-row" />
-            <br/>
-          </div>
+              className="contact-input" />
 
-          <div className="input-container">
-            {/* <label>Email</label> */}
             <input 
               required
               autoComplete="off"
               type="email" 
               name="user_email"
               placeholder="Email"
-              className="contact-input w-2-col h-3-quarters-row" />
-            <br/>
-          </div>
+              className="contact-input" />
 
-          <div className="input-container">
-            {/* <label>Message</label> */}
             <textarea 
               required
               name="message"
               placeholder="Your message..."
-              className="message w-2-col" />
-            <br/>
-          </div>
+              className="contact-input" />
 
           <input 
-            className="submit-btn w-1-col h-3-quarters-row"
+            className="submit-btn contact-input"
             type="submit" 
             value="SEND" />
 
         </form>
-      </div>
     </div>
   );
 }

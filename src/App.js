@@ -74,7 +74,7 @@ class App extends Component {
                 className="home"
                 onClick={this.handleRouteChange}>
                 <div className="logo" id="Home">
-                  <Logo fill="#000"/>
+                  <Logo fill="#222"/>
                 </div>
               </NavLink>
 
@@ -111,10 +111,10 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
           </div>
-          <div className="footer">
+        </div>
+        <div className="footer">
             <p>copyright:    something</p>
             <p>e.omtveit@gmail.com</p>
-          </div>
         </div>
       </HashRouter>
     )

@@ -1,5 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+$dark: #222;
+$light: #eee;
+$middle-d: #333;
+$middle: #555;
+$middle-l: #aaa;
+
+@import './contact.scss';
 
 * {
   margin: 0;
@@ -10,6 +19,7 @@
 
 .App {
     width: 100vw;
+    height: auto;
 }
 
 body {
@@ -53,7 +63,7 @@ body {
     position: fixed;
     height: 75px;
     width: 100%;
-    background-color: #eee;
+    background-color: $light;
     display: flex;
     justify-content: space-between;
 
@@ -86,7 +96,6 @@ body {
                 color: black;
             }
         }
-
     }
 }
 
@@ -113,15 +122,14 @@ body {
     }
     
     h4 {
-        color: #aaa;
+        color: $middle-l;
     }
     
-    .logo {
+    svg {
         height: 300px;
         width: 300px;
         border-radius: 50%;
-        border: 2px solid white;
-        margin-bottom: 20px;
+        margin-bottom: 4vh;
     }
 }
 
@@ -160,7 +168,7 @@ img {
 .technologies {
     grid-area: technologies;
     padding: 30px;
-    
+
     h2 {
         color: #fff;
         margin-bottom: 1.5rem;
@@ -196,12 +204,13 @@ img {
 .footer {
     width: 80vw;
     height: 50px;
-    background-color: #333;
+    background-color: $dark;
     display: flex;
     align-items: center;
     padding-left: 10vw;
     padding-right: 10vw;
     justify-content: space-between;
+    border-top: 1px solid $middle-d;
 
     p {
         color: #888;
@@ -229,7 +238,7 @@ img {
     margin-left: calc(10vw - 60px);
     font-size: x-large;
     font-weight: 500;
-    color: #444;
+    color: $dark;
 }
 
 @import 'max-width-1280.scss';

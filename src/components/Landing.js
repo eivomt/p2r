@@ -6,9 +6,9 @@ class Landing extends Component {
         return (
             <div className="landing">
                 <div className="l-content">
-                    <Logo fill="#fff"/>
+                    <Logo fill="#eee"/>
                     <h1>Eivind Omtveit</h1>
-                    <h4>full stack developer</h4>
+                    <h4>designer / developer</h4>
                 </div>
             </div>
         )

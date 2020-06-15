@@ -3,6 +3,10 @@
         height: 50px;
 
         .left {
+            margin-left: 10vw;
+            margin-right: 10vw;
+            width: 80vw;
+
             .logo {
                 width: 35px;
                 height: 35px;
@@ -10,9 +14,10 @@
         }
 
         .right {
-            width: 40vw;
+            width: 0;
 
             a {
+                display: none;
                 p {
                     font-size: small;
                 }
@@ -71,6 +76,42 @@
         height: 30px;
         p {
             font-size: xx-small;
+        }
+    }
+
+    .current-view {
+        // margin-left: calc(40vw - 60px);
+        margin-left: none;
+        font-size: large;
+        width: calc(80vw - 120px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .technologies {
+        border-bottom: 1px solid #333;
+        padding-bottom: 20vw;
+    }
+
+    .contact-container {
+        height: calc(100vh - 80px);
+        padding-top: 50px;
+
+        h2 {
+            font-size: xx-large;
+        }
+    }
+
+    .form-container {
+        width: 275px;
+
+        .contact-input {
+            width: 80%;
+            font-size: small;
+        }
+
+        .submit-btn {
+            font-size: medium;
         }
     }
 }
