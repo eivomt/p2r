@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 class Project extends Component {
+
     render() {
         return(
              <div className="grid">
@@ -9,10 +10,13 @@ class Project extends Component {
                     <h2>{this.props.title}</h2>
                 </div>
 
+                <div className="subtitle">
+                    <h3>{this.props.subtitle}</h3>
+                </div>
+
                 <div className="summary">
                     <h2>Summary</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde laborum voluptatibus ratione explicabo temporibus ipsa assumenda voluptas, rerum esse dolorum nemo blanditiis reiciendis pariatur asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique ea sed. Quis ab harum illo provident sequi nobis in aliquid natus.</p>
+                    {this.props.children[0]}
                 </div>
 
                 <div className="p-content">
@@ -23,8 +27,7 @@ class Project extends Component {
 
                 <div className="technologies">
                     <h2>Technologies</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde laborum voluptatibus ratione explicabo temporibus ipsa assumenda voluptas, rerum esse dolorum nemo blanditiis reiciendis pariatur asperiores.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae similique ea sed. Quis ab harum illo provident sequi nobis in aliquid natus.</p>
+                    {this.props.children[1]}
                     <div className="buttons">
                         <div className="button"></div>
                         <div className="button"></div>

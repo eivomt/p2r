@@ -25,6 +25,12 @@
         }
     }
 
+    .subtitle {
+        h3 {
+            font-size: .8em;
+        }
+    }
+
     .btn-img {
         height: 5vw;
         width: 5vw;
@@ -43,12 +49,18 @@
         p {
             font-size: .6em;
         }
+        h2 {
+            font-size: 1em;
+        }
     }
     .technologies {
         padding-left: 10vw;
         padding-right: 10vw;
         p {
             font-size: .6em;
+        }
+        h2 {
+            font-size: 1em;
         }
     }
 
@@ -66,9 +78,9 @@
     }
 
     .l-content {
-        .logo{
-            height: 150px;
-            width: 150px;
+        svg {
+            height: 200px;
+            width: 200px;
         }
     }
 
@@ -80,8 +92,6 @@
     }
 
     .current-view {
-        // margin-left: calc(40vw - 60px);
-        margin-left: none;
         font-size: large;
         width: calc(80vw - 120px);
         display: flex;
