@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 $dark: #222;
+$dark-l: #272727;
+$dark-d: #1e1e1e;
 $light: #eee;
 $middle-d: #333;
 $middle: #555;
@@ -266,6 +268,7 @@ img {
     border-radius: 50%;
     border: 1px solid white;
     transition: .5s;
+    background-color: $dark;
 }
 
 .btn-img:hover {
@@ -287,3 +290,4 @@ a {
 @import 'portrait.scss';
 @import 'max-width-767.scss';
 @import 'min-width-1920.scss';
+@import 'about.scss';

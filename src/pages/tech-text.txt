@@ -1,0 +1,33 @@
+-- Hand drawn sketches
+
+At the beginning of any design project, hand drawn sketches are easily the fastest way to concretize ideas. Having those sketches is very helpful when trying to evaluate different concepts.
+
+At this stage the really big choices are being made. Being able to explore one's options is crucial.
+
+An important part of making those early decisions is discussing them with others, who might have a fresh take. In order for that input to be valuable however, the topic of discussion has to be clear and understandable to all parties involved. Therefore its ideal to keep ideation visual and readable to outsiders.
+
+-- Adobe Suite
+
+All designs derive their value from being convincing enough to someone, willing and able, to invest in it. That's one of the reasons why visualization is such an important part of design.
+
+When it comes to digital visualization there really is very little, if any, software that can compete with the Adobe Suite.
+In this project f. ex i used:
+    -Photoshop
+        to touch up renders / images
+    -Illustrator
+        to create SVG's for technical drawings
+    -After Effect
+        to edit animations
+    -Premiere Pro
+        to cut and assemble a coherent film
+    -Indesign
+        to combine illustrations, diagrams and text to final files ready for print and digital presentation
+
+-- Rhinoceros
+
+To make sure my design can fit all the necessary components, Rhinoceros was crucial. While it's not the most precise / heavy 3D software out there, its quick and exploratory nature makes it ideal in the early stages of a design process. Which was, after all, arguably the case for the entirety of this project.
+
+Allthough Rhinoceros is a quick sketchlike 3D software, it still isn't a tool for shaping the underlying concept or vision. I used it primarily to define details and maximize efficiency of space.
+
+-- Keyshot
+

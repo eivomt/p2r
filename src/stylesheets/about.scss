@@ -1,0 +1,109 @@
+.about-container {
+    padding-top: 75px;
+}
+
+.about-summary {
+    background-color: $dark-d;
+    height: 100vh;
+    width: 20vw;
+    position: fixed;
+    padding-top: 20vh;
+    padding-left: 50px;
+    padding-right: 75px;
+
+    h2 {
+        color: $light;
+        font-weight: 300;
+        font-size: xx-large;
+    }
+
+    p {
+        margin-top: 10px;
+        margin-left: 20px;
+        color: $middle-l;
+    }
+
+    h3 {
+        margin-top: 40px;
+        color: $light;
+        font-weight: 300;
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+
+    li {
+        list-style: none;
+        margin-left: 0px;
+        color: $middle-l;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.about-main {
+    margin-left: calc(23vw + 60px);
+}
+
+.about-nav {
+    position: fixed;
+    top: 20vh;
+    right: 10vw;
+    display: none;
+}
+
+.about-content {
+    width: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20vh;
+
+    h3 {
+        text-align: center;
+        color: $light;
+        font-size: xx-large;
+        margin-bottom: 50px;
+        font-weight: 300;
+        border-bottom: 1px solid $middle-d;
+    }
+}
+
+.education, .skills, .hobbies {
+    width: 100%;
+    margin-bottom: 15vh;
+    margin-right: -60px;
+
+    .subject {
+        margin-top: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid $light;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            text-align: center;
+            color: $light;
+            font-size: large;
+            margin-bottom: 15px;
+            font-weight: 100;
+        }
+
+        p {
+            padding-left: 30%;
+            padding-right: 30%;
+            text-align: justify;
+            color: $middle-l;
+        }
+    }
+}

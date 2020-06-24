@@ -20,9 +20,11 @@ class Project extends Component {
                 </div>
 
                 <div className="p-content">
-                    <div className="btn-img"></div>
-                    <img className={this.props.imagesize} src={this.props.image} alt="camera"/>
-                    <div className="btn-img"></div>
+                    <button className="btn-img"></button>
+                    <div className="carousel">
+                        <img className={this.props.imagesize} src={this.props.image} alt="camera"/>
+                    </div>
+                    <button className="btn-img"></button>
                 </div>
 
                 <div className="technologies">
