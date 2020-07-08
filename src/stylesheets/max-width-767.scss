@@ -4,8 +4,8 @@
 
         .left {
             margin-left: 10vw;
-            margin-right: 10vw;
-            width: 80vw;
+            margin-right: 0;
+            width: 40vw;
 
             .logo {
                 width: 35px;
@@ -14,10 +14,10 @@
         }
 
         .right {
-            width: 0;
+            
 
             a {
-                display: none;
+               
                 p {
                     font-size: small;
                 }

@@ -19,7 +19,8 @@ class App extends Component {
       super(props)
       this.handleScroll = this.handleScroll.bind(this)
       this.handleRouteChange = this.handleRouteChange.bind(this)
-      this.state = {project: "Home"}
+      this.state = {project: "Home",
+        aboutShouldUpdate: false}
   }
 
   componentDidMount() {
@@ -40,9 +41,9 @@ class App extends Component {
       if (scroll < breakPoint) {
         this.setState({project: "Home"})
       } else if ( breakPoint + project > scroll && scroll > breakPoint) {
-        this.setState({project: "Plus U"})
+        this.setState({project: "Myosotis"})
       } else if (breakPoint + project * 2 > scroll && scroll > breakPoint + project) {
-        this.setState({project: "Forget Me Not"})
+        this.setState({project: "Plus U"})
       } else if (breakPoint + project * 3 > scroll && scroll > breakPoint + project * 2) {
         this.setState({project: "Portfolio"})
       }
@@ -93,12 +94,6 @@ class App extends Component {
               </NavLink>
 
               <NavLink 
-                to="/blog" 
-                onClick={this.handleRouteChange}>
-                <p>Blog</p>
-              </NavLink>
-
-              <NavLink 
                 to="/contact" 
                 onClick={this.handleRouteChange}>
                   <p>Contact</p>
@@ -107,7 +102,6 @@ class App extends Component {
           </div>
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/blog" component={Blog}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
           </div>

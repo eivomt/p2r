@@ -10,6 +10,8 @@
     padding-top: 20vh;
     padding-left: 50px;
     padding-right: 75px;
+    transition: 1s;
+    margin-left: calc(-23vw - 60px);
 
     h2 {
         color: $light;
@@ -41,7 +43,8 @@
 }
 
 .about-main {
-    margin-left: calc(23vw + 60px);
+    margin-left: 0;
+    transition: 1s;
 }
 
 .about-nav {
@@ -106,4 +109,12 @@
             color: $middle-l;
         }
     }
+}
+
+.active-main {
+    margin-left: calc(23vw + 60px);
+}
+
+.active-summary {
+    margin-left: 0;
 }

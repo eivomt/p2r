@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 
 class About extends Component {
+
+
+    componentDidMount() {
+        let summary = document.querySelector(".about-summary")
+        let main = document.querySelector(".about-main")
+
+        summary.classList.remove("active-summary")
+        main.classList.remove("active-main")
+
+        console.log(main, summary)
+
+        main.classList.add("active-main")
+        summary.classList.add("active-summary")
+    }
+
     render() {
         return(
             <div className="about-container">
