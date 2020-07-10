@@ -125,3 +125,39 @@
         }
     }
 }
+
+.about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-top: 50px !important;
+}
+
+.about-summary {
+    position: relative !important;
+    height: auto !important;
+    padding-top: 5vh !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-bottom: 5vh !important;
+    width: calc(100vw - 50px) !important;
+    background-color: rgba(0,0,0,0) !important;
+
+    p {
+        text-align: justify !important;
+        margin-left: 0 !important;
+    }
+}
+
+.about-main {
+    padding-top: 6.5vh !important;
+    margin-left: 0 !important;
+
+    p {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+.about-content {
+    padding-top: 0 !important;
+}
