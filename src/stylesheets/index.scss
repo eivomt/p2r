@@ -367,8 +367,8 @@ a {
     background-color: white;
 }
 
+@import 'about.scss';
 @import 'max-width-1280.scss';
 @import 'portrait.scss';
 @import 'max-width-767.scss';
 @import 'min-width-1920.scss';
-@import 'about.scss';
